@@ -15,12 +15,36 @@
     <div class="container">
       <div class="card">
         <div class="card-header">
-          <h2><a href="" class="title">{{post.title | title}}</a></h2>
+          <h2>{{post.title | title}}</h2>
           <small class="author"><a href="">John Doe</a></small>
           <small> - {{post.created_at | timesince}}</small>
         </div>
         <div class="card-body">
           <p>{{ post.body }}</p>
+        </div>
+        <div class="card-footer">
+          <div class="container">
+            <h2>Comments</h2>
+            <br />
+            {% for comment in post.comments.all %}
+            <div class="card">
+              <div class="card-header">
+                <h2>{{comment.name}}</h2>
+                <small> {{comment.created_at | timesince}}</small>
+              </div>
+              <div class="card-body">{{comment.body}}</div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="container">
+            <h2>Comment</h2>
+            <br />
+            <form method="POST">
+              {% csrf_token %} {{form.as_p}}
+              <button>Comment</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
