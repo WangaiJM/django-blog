@@ -1,0 +1,30 @@
+<!-- extension -->
+{% extends 'app.html' %}
+
+<!-- title -->
+{% block title %} | {{post.slug}} {% endblock title %}
+<div>
+  {% block content %}
+
+  <div class="main-card">
+    <div class="main-card-header">
+      <h2>Article</h2>
+      <!-- <a href="" class="btn btn-primary">Add an Article</a> -->
+    </div>
+    <!-- card-start -->
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h2><a href="" class="title">{{post.title | title}}</a></h2>
+          <small class="author"><a href="">John Doe</a></small>
+          <small> - {{post.created_at | timesince}}</small>
+        </div>
+        <div class="card-body">
+          <p>{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- card-end -->
+  </div>
+  {% endblock content %}
+</div>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+p {
+  line-height: 1.5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.btn {
+  border: 1px solid currentColor;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+header,
+footer {
+  background-color: #26a35b;
+  border-bottom: 2px solid navy;
+}
+header > .container,
+footer {
+  display: flex;
+  min-height: 12rem;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  text-transform: uppercase;
+}
+header h1 > a {
+  color: #fff;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.nav li {
+  padding: 2rem;
+  cursor: pointer;
+}
+.nav a {
+  color: #fff;
+}
+.nav li:hover a {
+  color: rgb(219, 217, 217);
+}
+/* #main {
+  padding: 2rem 0;
+} */
+.main-card-header {
+  background-color: #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.main-card-header h2 {
+  font-weight: 700;
+}
+.btn-primary {
+  background-color: #26a35b;
+  color: #fff;
+}
+.card {
+  background-color: #ececec;
+  margin: 1rem 0;
+  padding: 1.2rem;
+  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.15);
+}
+.card-header {
+}
+.title {
+  margin: 0.2rem 0;
+  font-size: 2.4rem;
+}
+.card-header a {
+  color: #000;
+}
+.title:hover {
+  text-decoration: underline;
+}
+small {
+  font-weight: 700;
+  line-height: 1.5;
+}
+.author {
+  font-style: italic;
+  color: #999;
+}
+.card-body {
+  background-color: #f8f8f8;
+  padding: 1rem 0.5rem;
+  margin: 0.5rem 0;
+}
+footer p {
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<!-- extension -->
+{% extends 'app.html' %}
+
+<!-- title -->
+{% block title %} | Home {% endblock title %}
+<div>
+  {% block content %}
+
+  <div class="main-card">
+    <div class="main-card-header">
+      <h2>Articles</h2>
+      <a href="" class="btn btn-primary">Add an Article</a>
+    </div>
+    <!-- card-start -->
+    <div class="container">
+      {% for post in posts %}
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            <a href="{% url 'show' post.slug %}" class="title"
+              >{{post.title | title}}</a
+            >
+          </h2>
+          <small class="author"><a href="">John Doe</a></small>
+          <small> - {{post.created_at | timesince}}</small>
+        </div>
+        <div class="card-body">
+          <p>{{ post.body | truncatewords:100}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- card-end -->
+  </div>
+  {% endblock content %}
+</div>
